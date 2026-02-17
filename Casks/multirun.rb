@@ -3,7 +3,7 @@ cask "multirun" do
   name "multirun"
   desc "Run multiple commands concurrently"
   homepage "https://github.com/ericfialkowski/multirun"
-  version "1.0.2"
+  version "1.0.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,23 +14,27 @@ cask "multirun" do
   on_macos do
     on_intel do
       url "https://github.com/ericfialkowski/multirun/releases/download/v#{version}/multirun_#{version}_darwin_amd64.tar.gz"
-      sha256 "8fa592e0178a6b5ff3ca8f7e72cc48dc611904fb38f6f0cf1fbf96836d340c93"
+      sha256 "b40013b1b47bbc5dd8878e0e9ece62cf0047881174d296bc1d6fcd72012ddab6"
     end
     on_arm do
       url "https://github.com/ericfialkowski/multirun/releases/download/v#{version}/multirun_#{version}_darwin_arm64.tar.gz"
-      sha256 "7985ce53af6361e5ffc93ec796165cf4f1eef00a48f3ac5d1bdc880b385a09be"
+      sha256 "de71dbc2bb90a0468fadce5888feaafed74e19fbe368d1018055ea434d178205"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ericfialkowski/multirun/releases/download/v#{version}/multirun_#{version}_linux_amd64.tar.gz"
-      sha256 "984fe5f08d4d91ebfe0812536623b01fc01db14bf9e908284a44ba17d2a93774"
+      sha256 "cdb72c2fe0ac1bb2a44cc1f7ab6ff66cbe6860a7af0a28f538be555a912cbdc6"
     end
     on_arm do
       url "https://github.com/ericfialkowski/multirun/releases/download/v#{version}/multirun_#{version}_linux_arm64.tar.gz"
-      sha256 "fb1affff7257ef85dc1c5415332696beea6f0f959e421ee9b259ff0c62426ff7"
+      sha256 "710411e1e616b240d2e409c71584b843c5d43888b7c2f0da7b1dff206b55df26"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/multirun"]
   end
 
   # No zap stanza required
