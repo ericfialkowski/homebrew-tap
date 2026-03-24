@@ -1,9 +1,9 @@
 cask "kirkmeme" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.0.1"
-  sha256 arm:   "1bf333ce1c64373a1c0f701831dcf6d45230ee7132748591ff83d3af4036f7ef",
-         intel: "06bf51b02af55285a25e15a4af7d5c867003268d673f5af6664b23f9019a5d15"
+  version "1.0.0"
+  sha256 arm:   "29af19eb98c2a53b663621ede8b61b2085f51a2d6118b07a3afa63cc04337996",
+         intel: "df001c0adda10b942526322abf7f13a7164181ec4b68718ffa1807033977be81"
 
   url "https://github.com/ericfialkowski/kirkmeme/releases/download/v#{version}/kirkmeme_#{version}_darwin_#{arch}.tar.gz"
 
