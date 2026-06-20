@@ -7,20 +7,20 @@ class Uuid < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ericfialkowski/uuid-cl/releases/download/v1.0.5/uuid-darwin-arm64.tar.gz"
-      sha256 "060c91ad7e978216bf39f90aaee8392046d08ff7308c9ba4c986eb8faa3c7b8b"
+      sha256 "1d93b6ff222e61dda984717898c2fedbe43e5400dfd24ba518594e7b53de1a37"
     else
       url "https://github.com/ericfialkowski/uuid-cl/releases/download/v1.0.5/uuid-darwin-amd64.tar.gz"
-      sha256 "bb89ed3ec78a094f00e6d67239077dd003b17da4f7fb970f52d0c93f26daa1b2"
+      sha256 "8f684908cfeefbe89b8d2acb995fd2ed8a31a2caf8353ee52b670f240a5ec072"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/ericfialkowski/uuid-cl/releases/download/v1.0.5/uuid-linux-arm64.tar.gz"
-      sha256 "e1d920979ee11358ffcd6caf521897b51355b5006bb14393404a0f6b125abbbb"
+      sha256 "12e004917933c7e10fce6836308d298eb73e64a6146bc777b907457d7e8c71c7"
     else
       url "https://github.com/ericfialkowski/uuid-cl/releases/download/v1.0.5/uuid-linux-amd64.tar.gz"
-      sha256 "214a3394c5c19424cf82cff2982576dbec14d57d3f9bff45970a89be7a1e8a4b"
+      sha256 "58c3ea67a4507f52b7f64b231ebef96ab0cfc546fb533d1aae38c17345b9abbd"
     end
   end
 
